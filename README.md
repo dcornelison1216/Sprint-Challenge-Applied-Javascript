@@ -30,13 +30,23 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. What is the DOM?
 
+DOM is an acronym that means "Document Object Model". HTML is parsed by browsers and turned into the DOM. In a lot of cases, the DOM will look just like the HTML file that the browser parsed into the webpage. We also use JavaScript to manipulate the DOM, so in those instances, the DOM will look very different from the original HTML file. Javascript is the language that the browser interprets to make changes to the DOM.
+
 2. What is an event?
+
+An event is a broad term for many different actions that a user might take while using a webpage. The list of events includes things like click, mouseover, drag, drop, copy, paste, and keypress.
 
 3. What is an event listener?
 
+An event listener is a tool used in JavaScript that waits for a specific event to occur and then triggers a block of code to execute. For example, a mouseenter event listener might trigger a button to become slightly larger, then a mouseleave event listener would return the button back to its original size when the cursor leaves that element.
+
 4. Why would we convert a NodeList into an Array?
 
+A NodeList object is an array-like list of objects and has access to a length property and indexed entries. Properties of specific nodes can be changed in a NodeList too. However, NodeLists do not have access to the list of array methods like push, pop, splice, etc...We would convert a NodeList to an Array so that we could manipulate the data contained in the NodeList using array methods.
+
 5. What is a component?
+
+A component is a small and possibly reusable block of code that creates an element to display on a website. If there is a mostly blank HTML file, we can use JavaScript to create elements, piece them together, and set their values. Those pieces, once brought together, are a component. Once assembled, a component can be added to the DOM and displayed in a browser.
 
 ### Git Set up
 
@@ -51,7 +61,7 @@ Your finished project must include all of the following requirements:
 
 * [ ] Look through the HTML code and familiarize yourself with the different sections. Some of them already exist, but some need to be filled in. DO NOT add any code to the HTML file itself.
 
-* [ ] Following the instructions in the `Header/index.js` file, create the Header component. 
+* [ ] Following the instructions in the `Header/index.js` file, create the Header component.
 
 * [ ] Following the instructions in the `Tabs/index.js` file, create individual Tabs components.
 
@@ -61,10 +71,10 @@ Your finished project must include all of the following requirements:
 
 Your stretch challenge is to write the functionality of a `Carousel` component. This is an advanced challenge, so you are not expected to be able to complete it. If you begin and don't finish, you should still submit with what you have. This is going to be a bit different because you are going to need to create some advanced functionality for the carousel. There is no need to request data for this exercise.
 
-* [ ] Complete the carousel functionality in `Carousel.js`
+* [X] Complete the carousel functionality in `Carousel.js`
 
 * [ ] If you complete the Carousel, add functionality so that the carousel slides when the buttons are pressed instead of just appearing.
 
-* [ ] Create an 'infinite loop' carousel. In which as long as you click on an arrow, the array of images will loop over itself.
+* [X] Create an 'infinite loop' carousel. In which as long as you click on an arrow, the array of images will loop over itself.
 
 * [ ] If you have finished the above, research `data attributes`. Implement data attributes within your tabs as well as your cards. Give the tabs functionality so that when they are clicked they filter the cards to only display the cards that contain that topic.
