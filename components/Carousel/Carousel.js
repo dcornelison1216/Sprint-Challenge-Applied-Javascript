@@ -57,6 +57,7 @@ images[imgIndex].style.display = 'block'
 
 // add right button functionality
 const rightButton = document.querySelector('.right-button')
+rightButton.style = 'transition: background-color 0.2s ease'
 rightButton.addEventListener('click', () => {
   imgIndex += 1
   let prevImgIndex = (imgIndex - 1) % images.length
@@ -68,6 +69,7 @@ rightButton.addEventListener('click', () => {
 
 // add left button functionality
 const leftButton = document.querySelector('.left-button')
+leftButton.style = 'transition: background-color 0.2s ease'
 leftButton.addEventListener('click', () => {
   imgIndex += (images.length - 1)
   let prevImgIndex = (imgIndex + 1) % images.length
