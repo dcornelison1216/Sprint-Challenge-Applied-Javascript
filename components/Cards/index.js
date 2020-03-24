@@ -10,7 +10,7 @@ axios.get('https://lambda-times-backend.herokuapp.com/articles')
 // make cards for javascript
 .then(response => {
   response.javascript.forEach(entry => {
-    componentMaker(entry)
+    componentMaker(entry, 'javascript')
   })
   return response
 })
@@ -18,7 +18,7 @@ axios.get('https://lambda-times-backend.herokuapp.com/articles')
 // make cards for bootstrap
 .then(response => {
   response.bootstrap.forEach(entry => {
-    componentMaker(entry)
+    componentMaker(entry, 'bootstrap')
   })
   return response
 })
@@ -26,7 +26,7 @@ axios.get('https://lambda-times-backend.herokuapp.com/articles')
 // make cards for technology
 .then(response => {
   response.technology.forEach(entry => {
-    componentMaker(entry)
+    componentMaker(entry, 'technology')
   })
   return response
 })
@@ -34,7 +34,7 @@ axios.get('https://lambda-times-backend.herokuapp.com/articles')
 // make cards for jquery
 .then(response => {
   response.jquery.forEach(entry => {
-    componentMaker(entry)
+    componentMaker(entry, 'jquery')
   })
   return response
 })
@@ -42,7 +42,7 @@ axios.get('https://lambda-times-backend.herokuapp.com/articles')
 // make cards for node
 .then(response => {
   response.node.forEach(entry => {
-    componentMaker(entry)
+    componentMaker(entry, 'node')
   })
   return response
 })
@@ -51,10 +51,12 @@ axios.get('https://lambda-times-backend.herokuapp.com/articles')
 // This won't be as easy as just iterating over an array though.
 // Create a function that will programmatically create the following DOM component:
 
-const componentMaker = (obj) => {
+const componentMaker = (obj, className) => {
   // <div class="card">
   const card = document.createElement('div')
   card.classList.add('card')
+  card.classList.add(className)
+  card.classList.add('all')
   //   <div class="headline">{Headline of article}</div>
   const headline = document.createElement('div')
   headline.classList.add('headline')
